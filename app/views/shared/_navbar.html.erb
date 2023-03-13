@@ -1,4 +1,6 @@
-<div>
+<%
+=begin%>
+ <div>
  <div>
    <%= link_to "Ruby learning journal", root_path %>
 
@@ -7,4 +9,31 @@
    </div>
 
  </div>
-</div>
+</div> 
+<%
+=end%>
+
+  <%
+=begin%>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light nav-pills">
+    <ul class="nav">
+      <li class="nav-item active">
+        <%= link_to "Ruby learning journal", root_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "New Entry", new_entry_path, class: "nav-link" %>
+      </li>
+    </ul>
+  </nav> 
+<%
+=end%>
+
+<nav class="navbar navbar-light" style="background-color: #e3f2fd; navbar-expand-lg">
+  <ul class="nav">
+    <li class="nav-item active">
+      <%= link_to "Ruby learning journal", root_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "New Entry", new_entry_path, class: "nav-link" %>
+    </li>
+</nav>
