@@ -4,21 +4,25 @@
 
 <%= form_with(model: @entry) do |form| %>
 
-<div class="mx-auto font-weight-bold" style="width: 200px; padding-top: 25px;" >
-   <%= form.label :name %>
-   <%= form.text_field :name %>
- </div>
+<div class="mb-3 row mx-auto">
+    <label class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-5">
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+  </div>
 
-<div class="mx-auto font-weight-bold" style="width: 200px; padding-top: 25px;" >
-    <%= form.label :link %>
-    <%= form.text_field :link %>
- </div>
+  <div class="mb-3 row mx-auto">
+    <label class="col-sm-2 col-form-label">Link</label>
+    <div class="col-sm-5">
+      <%= form.text_field :link, class: "form-control" %>
+    </div>
+  </div>
 
 <div class="mx-auto" style="width: 200px; padding-top: 25px;" >
    <%= form.submit%>
  </div>
 
-<% end %>
+  <% end %>
 
 <br>
 
