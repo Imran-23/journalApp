@@ -2,38 +2,30 @@
   <h1>All Entries</h1>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-      Name
-    </div>
-    <div class="col-sm">
-      Link
-    </div>
-    <div class="col-sm">
-      Action
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-       <% @entries.each do |entry| %>
-        <h1 style="padding-top: 20px"></h1>
-          <%= entry.name %> <br>
-        <% end %>
-    </div>
-    <div class="col-sm">
-      <% @entries.each do |entry| %>
-        <h1 style="padding-top: 20px"></h1>
-        <%= entry.link %> <br>
-     <% end %>
-    </div>
-    <div class="col-sm" style="padding-top: 20px">
-      <% @entries.each do |entry| %>
-        <%= button_to "Delete", entry, method: :delete, data: { confirm: "Are you sure you want to delete this Project ?"} %> <br>
-     <% end %>
-    </div>
-  </div>
-</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Link</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @entries.each do |entry| %>
+      <tr>
+        <td>
+          <%=entry.id%>
+        </td>
+        <td>
+          <%=entry.name%>
+        </td>
+        <td>
+          <%=entry.link%>
+        </td>
+        <td>
+          <%= button_to "Delete", entry, method: :delete, data: { confirm: "Are you sure you want to delete this Project ?"} %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
