@@ -12,10 +12,10 @@
     </tr>
   </thead>
   <tbody>
-    <% @entries.each do |entry| %>
+    <% @entries.each_with_index do |entry, index| %>
       <tr>
         <td>
-          <%=entry.id%>
+          <%=index+1%>
         </td>
         <td>
           <%=entry.name%>
