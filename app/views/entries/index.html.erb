@@ -24,6 +24,7 @@
           <%=entry.link%>
         </td>
         <td>
+          <%= button_to "Edit", edit_entry_path(entry), method: :get, class: "btn btn-primary btn-sm" %>
           <%= button_to "Delete", entry, method: :delete, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
