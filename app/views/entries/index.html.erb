@@ -1,9 +1,9 @@
-<div class="mx-auto font-weight-bold" style="width: 200px; padding-top: 25px;" >
-  <h1 class="fw-light">All Entries</h1>
+<div class="mx-auto font-weight-bold" style="width: 200px; padding-top: 25px;">
+  <h1 class="fw-light text-center">All Entries</h1>
 </div>
 
 <table class="table fw-light table-striped table-bordered table-hover">
-  <thead>
+  <thead class="bg-light-blue text-white">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
@@ -24,8 +24,10 @@
           <%=entry.link%>
         </td>
         <td>
-          <%= button_to "Delete", entry, method: :delete, class: "btn btn-danger"%>
+          <%= button_to "Delete", entry, method: :delete, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
     <% end %>
   </tbody>
+</table>
+
