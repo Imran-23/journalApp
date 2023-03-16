@@ -1,31 +1,22 @@
 <div class="container">
-    <div class="mx-auto font-weight-bold d-flex justify-content-center" style="padding-top: 25px;" >
-    <h1 class="fw-light" >New Entry</h1>
-    </div>
-
-    <div class="border-primary py-5" >
-        <%= form_with(model: @entry) do |form| %>
-
-        <div class="mb-3 row mx-auto d-flex justify-content-center">
-            <label class="col-sm-2 col-form-label">Name</label>
-            <div class="col-sm-4">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body p-5">
+      <h1 class="fw-light text-center mb-4">New Entry</h1>
+      <%= form_with(model: @entry, class: "row g-3") do |form| %>
+        <div class="col-md-8 offset-md-2">
+          <div class="mb-3">
+            <%= form.label :name, class: "form-label fw-bold" %>
             <%= form.text_field :name, class: "form-control" %>
-            </div>
-        </div>
-
-        <div class="mb-3 row mx-auto d-flex justify-content-center">
-            <label class="col-sm-2 col-form-label">Link</label>
-            <div class="col-sm-4">
+          </div>
+          <div class="mb-3">
+            <%= form.label :link, class: "form-label fw-bold" %>
             <%= form.text_field :link, class: "form-control" %>
-            </div>
+          </div>
+          <div class="d-grid gap-2">
+            <%= form.submit "Submit", class: "btn btn-primary btn-lg" %>
+          </div>
         </div>
-
-        <div class="mx-auto pt-2" style="width: 200px; padding-top: 25px;" >
-        <%= form.submit  class: "btn btn-success"%>
-        </div>
-
-        <% end %>
+      <% end %>
     </div>
-    <br>
-
+  </div>
 </div>
