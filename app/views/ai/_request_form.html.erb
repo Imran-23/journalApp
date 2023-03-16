@@ -1,14 +1,16 @@
 <%= form_for :ai_request, url: ai_request_path, method: :post, remote: true, html: { class: "row g-3" } do |f| %>
   <%= f.hidden_field :uuid, value: @uuid %>
   <div class="col-md-8">
-    <div class="form-floating">
-      <%= f.text_area :prompt, class: "form-control", id: "prompt", rows: 8 %>
-      <%= f.label :prompt, class: "form-label", for: "prompt" %>
+    <div class="card">
+      <div class="card-header bg-light-blue text-white">Please enter your prompt:</div>
+      <div class="card-body">
+        <%= f.text_area :prompt, class: "form-control", id: "prompt", rows: 8 %>
+      </div>
     </div>
   </div>
   <div class="col-md-4">
     <div class="card">
-      <div class="card-header bg-light-blue">Choose an AI model:</div>
+      <div class="card-header bg-light-blue text-white">Choose an AI model:</div>
       <div class="card-body">
         <%= f.select :ai_model, options_for_select([
           [ "Ada $0.0016 / 1K tokens", "ada" ], 
@@ -23,3 +25,4 @@
     <%= f.submit "Send", class: "btn btn-primary" %>
   </div>
 <% end %>
+
