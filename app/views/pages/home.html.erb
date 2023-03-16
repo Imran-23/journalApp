@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <h1 class="mx-auto font-weight-bold text-uppercase text-center">Ask GPT</h1>
+  <h1 class="fw-light text-uppercase text-center">Ask GPT</h1>
   <%= render partial: "ai/request_form", locals: { uuid: @uuid } %>
   <%= turbo_stream_from "channel_#{@uuid}" %>
   <div id="ai_output" class="mt-3">
