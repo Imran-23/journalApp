@@ -1,25 +1,31 @@
-<h1>New Entry</h1>
+<div class="container">
+    <div class="mx-auto font-weight-bold d-flex justify-content-center" style="padding-top: 25px;" >
+    <h1 class="fw-light" >New Entry</h1>
+    </div>
 
-<%= form_with(model: @entry) do |form| %>
+    <div class="border-primary py-5" >
+        <%= form_with(model: @entry) do |form| %>
 
- <div>
-   <%= form.label :name %>
-   <%= form.text_field :name %>
- </div>
+        <div class="mb-3 row mx-auto d-flex justify-content-center">
+            <label class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-4">
+            <%= form.text_field :name, class: "form-control" %>
+            </div>
+        </div>
 
- <div>
-   <%= form.label :link %>
-   <%= form.text_field :link %>
- </div>
+        <div class="mb-3 row mx-auto d-flex justify-content-center">
+            <label class="col-sm-2 col-form-label">Link</label>
+            <div class="col-sm-4">
+            <%= form.text_field :link, class: "form-control" %>
+            </div>
+        </div>
 
- <div>
-   <%= form.submit %>
- </div>
+        <div class="mx-auto pt-2" style="width: 200px; padding-top: 25px;" >
+        <%= form.submit  class: "btn btn-success"%>
+        </div>
 
-<% end %>
+        <% end %>
+    </div>
+    <br>
 
-<br>
-
-<div>
- <%= link_to "Back to home", root_path %>
 </div>
