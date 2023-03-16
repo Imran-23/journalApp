@@ -2,33 +2,34 @@
   <h1 class="fw-light text-center">All Entries</h1>
 </div>
 
-<table class="table fw-light table-striped table-bordered table-hover">
+<table class="table table-bordered table-striped table-hover mt-4">
   <thead class="bg-light-blue text-white">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Link</th>
-      <th scope="col">Action</th>
+      <th scope="col" class="fs-5 px-4 py-2">No.</th>
+      <th scope="col" class="fs-5 px-4 py-2">Name</th>
+      <th scope="col" class="fs-5 px-4 py-2">Link</th>
+      <th scope="col" class="fs-5 px-4 py-2">Actions</th>
     </tr>
   </thead>
   <tbody>
     <% @entries.each_with_index do |entry, index| %>
-      <tr>
-        <td>
+      <tr class="table-row bg-light">
+        <td class="px-4 py-2">
           <%=index+1%>
         </td>
-        <td>
+        <td class="px-4 py-2">
           <%=entry.name%>
         </td>
-        <td>
+        <td class="px-4 py-2">
           <%=entry.link%>
         </td>
-        <td>
-          <%= button_to "Edit", edit_entry_path(entry), method: :get, class: "btn btn-primary btn-sm" %>
-          <%= button_to "Delete", entry, method: :delete, class: "btn btn-danger btn-sm" %>
+        <td class="px-4 py-2">
+          <div class="d-flex align-items-center">
+            <%= button_to "Edit", edit_entry_path(entry), method: :get, class: "btn btn-primary btn-sm me-2 rounded-pill" %>
+            <%= button_to "Delete", entry, method: :delete, class: "btn btn-danger btn-sm rounded-pill" %>
+          </div>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
