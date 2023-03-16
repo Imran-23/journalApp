@@ -2,7 +2,7 @@
   <h1 class="fw-light text-center">All Entries</h1>
 </div>
 
-<table class="table table-bordered table-striped table-hover mt-4">
+<table class="table table-bordered table-striped table-hover mt-4 table-responsive" style="font-size: 16px;">
   <thead class="bg-light-blue text-white">
     <tr>
       <th scope="col" class="fs-5 px-4 py-2">No.</th>
@@ -14,7 +14,7 @@
   </thead>
   <tbody>
     <% @entries.each_with_index do |entry, index| %>
-      <tr class="table-row bg-light">
+      <tr class="table-row bg-light hover">
         <td class="px-4 py-2">
           <%=index+1%>
         </td>
