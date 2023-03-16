@@ -11,3 +11,23 @@
     background-color: #2c3e50;
     color: #fff;
   }
+
+  .table-row:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .table td, .table th {
+    border: none;
+  }
+  
+  .table th {
+    padding: 10px;
+  }
+  
+  .table-row {
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-primary, .btn-danger {
+    padding: 6px 12px;
+  }
